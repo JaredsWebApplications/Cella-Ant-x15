@@ -12,7 +12,6 @@ class Cell {
       return [this.bl.x, this.bl.y, this.length, this.width];
     }
 	
-	//Updates the state's color by adding 1 or resetting. Returns the new color.
 	updateColor() {
 		
 		//Increment the current state. If we're 
@@ -51,7 +50,7 @@ class Cell {
          * state: which color is the cell
         */
 
-		this.state = stateColor.BLACK;
+	    this.state = stateColor.BLACK;
       
         this.bl = bl;
         this.length = length;
@@ -125,6 +124,7 @@ function setup() {
 function draw() {
 	background('black');
     let m = 41;
+    let a = 0;
 
     for(let x = 0; x < m; ++x){
         for(let y = 0; y < m; ++y){
