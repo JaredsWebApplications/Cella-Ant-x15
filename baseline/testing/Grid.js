@@ -12,16 +12,9 @@ class Cell {
       return [this.bl.x, this.bl.y, this.length, this.width];
     }
 	
-	updateColor() {
-		
-		//Increment the current state. If we're 
-
-		if(this.selector++ >= 5) {
-			this.state = stateColor.BLACK;
-		}
-
-		//Sets the color of the cell based on the color it's just been changed to.
-        switch(this.state) {
+	//Get the current color
+	getCurrentColor() {
+		 switch(this.state) {
             case stateColor.BLACK:
                 this.c = color ('black');
                 break;
@@ -40,6 +33,19 @@ class Cell {
         }
         return this.c;
 	}
+	
+	//Updates the color and returns the new color
+	updateColor() {
+		//Increment the current state.
+		if(this.state++ >= 4) {
+			this.state = stateColor.BLACK;
+		}
+
+		//Sets the color of the cell based on the color it's just been changed to.
+        return this.getCurrentColor();
+	}
+	
+
 
 	constructor(bl, length=10, width=10) {
         /*
@@ -62,7 +68,8 @@ class Cell {
        * Draw the current square to the screen
       */ 
 
-      let current_color = this.updateColor();
+	  //Get the current color of the cell
+	  let current_color = this.getCurrentColor();
       fill(current_color);
       stroke('white');
       strokeWeight(2);
@@ -111,6 +118,11 @@ class grid {
         }
         return mat;
     }
+	
+	//Updates the color of an individual cell
+	updateIndexColor(xIndex, yIndex) {
+		this.matrix[xIndex][yIndex].updateColor();		
+	}
 };
 
 var g_grid = new grid();
@@ -119,10 +131,26 @@ function setup() {
     var length = 410;
     var height = 410;
 	createCanvas(length, height);
+	
+	//Tests the 'updateIndexColor' function
+	g_grid.updateIndexColor(2, 1);
+	g_grid.updateIndexColor(2, 2);
+	g_grid.updateIndexColor(2, 2);
+	g_grid.updateIndexColor(2, 3);
+	g_grid.updateIndexColor(2, 3);
+	g_grid.updateIndexColor(2, 3);
+	g_grid.updateIndexColor(2, 4);
+	g_grid.updateIndexColor(2, 4);
+	g_grid.updateIndexColor(2, 4);
+	g_grid.updateIndexColor(2, 4);
+	g_grid.updateIndexColor(2, 5);
+	g_grid.updateIndexColor(2, 5);
+	g_grid.updateIndexColor(2, 5);
+	g_grid.updateIndexColor(2, 5);
+	g_grid.updateIndexColor(2, 5);
 }
 
 function draw() {
-	background('black');
     let m = 41;
     let a = 0;
 
@@ -131,5 +159,4 @@ function draw() {
             g_grid.matrix[x][y].drawToScreen();
         }
     }
-
 }
