@@ -12,6 +12,11 @@ class Cell {
       return [this.bl.x, this.bl.y, this.length, this.width];
     }
 	
+	//Get the current state
+	getState() {
+		return this.state;
+	}
+	
 	//Get the current color
 	getCurrentColor() {
 		 switch(this.state) {
@@ -126,6 +131,7 @@ class grid {
 };
 
 var g_grid = new grid();
+var r_ant  = new RedAnt();
 
 function setup() {
     var length = 410;
@@ -133,30 +139,22 @@ function setup() {
 	createCanvas(length, height);
 	
 	//Tests the 'updateIndexColor' function
-	g_grid.updateIndexColor(2, 1);
-	g_grid.updateIndexColor(2, 2);
-	g_grid.updateIndexColor(2, 2);
-	g_grid.updateIndexColor(2, 3);
-	g_grid.updateIndexColor(2, 3);
-	g_grid.updateIndexColor(2, 3);
-	g_grid.updateIndexColor(2, 4);
-	g_grid.updateIndexColor(2, 4);
-	g_grid.updateIndexColor(2, 4);
-	g_grid.updateIndexColor(2, 4);
-	g_grid.updateIndexColor(2, 5);
-	g_grid.updateIndexColor(2, 5);
-	g_grid.updateIndexColor(2, 5);
-	g_grid.updateIndexColor(2, 5);
-	g_grid.updateIndexColor(2, 5);
 }
 
 function draw() {
     let m = 41;
     let a = 0;
+	var moved = false;
 
     for(let x = 0; x < m; ++x){
         for(let y = 0; y < m; ++y){
-            g_grid.matrix[x][y].drawToScreen();
+			//If we haven't already made the ant move on this cycle, do that now
+			if(!moved &&r_ant.getXPos() == x && r_ant.getYPos() == y){
+				r_ant.move(g_grid.matrix[x][y].getState());
+				g_grid.updateIndexColor(x, y);
+				var moved = true;
+			}
+			g_grid.matrix[x][y].drawToScreen();
         }
     }
 }
