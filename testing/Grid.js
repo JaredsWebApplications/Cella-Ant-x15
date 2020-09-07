@@ -138,23 +138,18 @@ function setup() {
     var height = 410;
 	createCanvas(length, height);
 	
+	let m = 41;
+	for(let x = 0; x < m; ++x){
+        for(let y = 0; y < m; ++y){
+			g_grid.matrix[x][y].drawToScreen();
+        }
+    }
+	
 	//Tests the 'updateIndexColor' function
 }
 
 function draw() {
-    let m = 41;
-    let a = 0;
-	var moved = false;
-
-    for(let x = 0; x < m; ++x){
-        for(let y = 0; y < m; ++y){
-			//If we haven't already made the ant move on this cycle, do that now
-			if(!moved &&r_ant.getXPos() == x && r_ant.getYPos() == y){
-				r_ant.move(g_grid.matrix[x][y].getState());
-				g_grid.updateIndexColor(x, y);
-				var moved = true;
-			}
-			g_grid.matrix[x][y].drawToScreen();
-        }
-    }
+	r_ant.move(g_grid.matrix[r_ant.getXPos()][r_ant.getYPos()].getState());
+	g_grid.updateIndexColor(r_ant.getXPos(), r_ant.getYPos());
+	g_grid.matrix[r_ant.getXPos()][r_ant.getYPos()].drawToScreen();
 }

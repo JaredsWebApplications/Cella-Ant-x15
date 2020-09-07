@@ -62,12 +62,15 @@ class RedAnt {
 		
 		//Allows the ant to loop
 		if(this.xPos < 0)
-			this.xPos = 41;
-		else if(this.xPos > 41)
+			this.xPos = 40;
+		
+		if(this.xPos > 40)
 			this.xPos = 0;
-		else if(this.yPos < 0)
-			this.yPos = 41;
-		else if(this.yPos > 41)
+		
+		if(this.yPos < 0)
+			this.yPos = 40;
+		
+		if(this.yPos > 40)
 			this.yPos = 0;
 	}
 }
