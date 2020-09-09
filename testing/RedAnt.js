@@ -11,7 +11,10 @@ const turnDirection = {
 }
 
 class RedAnt {
-	//Set the current x and y position of the ant, hex value, and direction facing
+    /*
+    * Set the current x and y position of the ant, hex value, and direction facing    
+    */
+
 	constructor() {
 		this.xPos 	= 20;
 		this.yPos 	= 20;
@@ -19,14 +22,11 @@ class RedAnt {
 		this.hex 	= 0x15;
 	}
 
-	getXPos() { return this.xPos; }
-	
-	getYPos() {  return this.yPos; }
-	
 	setMovementDirection(cellState) {
         /*
          * Sets the movement direction of the Ant based on it's hex value, cell state and prior direction
         */
+
 		var antDir = (this.hex % (32 >> cellState)) >> (4 - cellState);
 		
 		if(antDir == turnDirection.LEFT){ this.facing++; }
@@ -51,28 +51,24 @@ class RedAnt {
 			case direction.NORTH:
 				this.yPos++;
                 break;
-			case	direction.WEST:
+			case direction.WEST:
 				this.xPos--;
                 break;
-			case	direction.SOUTH:
+			case direction.SOUTH:
 				this.yPos--;
                 break;
-			case 	direction.EAST:
+			case direction.EAST:
 				this.xPos++;
                 break;
 		}
-		
+
 		// Allows the ant to loop
-		if(this.xPos < 0)
-			this.xPos = 40;
+        if(this.xPos < 0){ this.xPos = 40; }
 		
-		if(this.xPos > 40)
-			this.xPos = 0;
+        if(this.yPos < 0){ this.yPos = 40; }
+
+        if(this.xPos > 40){ this.xPos = 0; }
 		
-		if(this.yPos < 0)
-			this.yPos = 40;
-		
-		if(this.yPos > 40)
-			this.yPos = 0;
+        if(this.yPos > 40){ this.yPos = 0; }
 	}
 }
