@@ -38,9 +38,9 @@ class RedAnt {
 		var antDir = (this.hex % (32 >> cellState)) >> (4 - cellState);
 		
 		if(antDir == turnDirection.LEFT)
-			this.facing++;
-		else
 			this.facing--;
+		else
+			this.facing++;
 		
 		if(this.facing < direction.NORTH)
 			this.facing = direction.WEST;
@@ -53,16 +53,16 @@ class RedAnt {
 		switch(this.facing)
 		{
 			case 	direction.NORTH:
-				this.yPos++;
-			break;
-			case	direction.WEST:
-				this.xPos--;
-			break;
-			case	direction.SOUTH:
 				this.yPos--;
 			break;
 			case 	direction.EAST:
 				this.xPos++;
+			break;
+			case	direction.SOUTH:
+				this.yPos++;
+			break;
+			case	direction.WEST:
+				this.xPos--;
 			break;
 		}
 		

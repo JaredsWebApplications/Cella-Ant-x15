@@ -157,5 +157,5 @@ function draw() {
 	g_grid.updateIndexColor(r_ant.getXPos(), r_ant.getYPos());
 	
 	//Moves the ant based on the new movement direction
-	r_ant.move(g_grid.matrix[r_ant.getXPos()][r_ant.getYPos()]);
+	r_ant.move();
 }
