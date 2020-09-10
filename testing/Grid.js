@@ -73,7 +73,7 @@ class Cell {
        * Draw the current square to the screen
       */ 
 
-	  // Get the current color of the cell
+	  //Get the current color of the cell
 	  let current_color = this.getCurrentColor();
       fill(current_color);
       stroke('white');
@@ -144,10 +144,12 @@ function setup() {
 			g_grid.matrix[x][y].drawToScreen();
         }
     }
+	
+	//Tests the 'updateIndexColor' function
 }
 
 function draw() {
-	r_ant.move(g_grid.matrix[r_ant.xPos][r_ant.yPos].getState());
-	g_grid.updateIndexColor(r_ant.xPos, r_ant.yPos);
-	g_grid.matrix[r_ant.xPos][r_ant.yPos].drawToScreen();
+	r_ant.move(g_grid.matrix[r_ant.getXPos()][r_ant.getYPos()].getState());
+	g_grid.updateIndexColor(r_ant.getXPos(), r_ant.getYPos());
+	g_grid.matrix[r_ant.getXPos()][r_ant.getYPos()].drawToScreen();
 }

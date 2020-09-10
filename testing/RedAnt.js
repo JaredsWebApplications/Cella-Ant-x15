@@ -11,64 +11,66 @@ const turnDirection = {
 }
 
 class RedAnt {
-    /*
-    * Set the current x and y position of the ant, hex value, and direction facing    
-    */
-
-	constructor(x=20, y=20, dir=direction.NORTH, value=0x15) {
-        this.xPos = x;
-        this.yPos = y;
-        this.facing = dir;
-        this.hex = value;
+	//Set the current x and y position of the ant, hex value, and direction facing
+	constructor() {
+		this.xPos 	= 20;
+		this.yPos 	= 20;
+		this.facing = direction.NORTH;
+		this.hex 	= 0x15;
 	}
-
-	setMovementDirection(cellState) {
-        /*
-         * Sets the movement direction of the Ant based on it's hex value, cell state and prior direction
-        */
-
-		var antDir = (this.hex % (32 >> cellState)) >> (4 - cellState);
-		
-		if(antDir == turnDirection.LEFT){ this.facing++; }
-		else{ this.facing--; }
-		
-        if(this.facing < direction.NORTH){
-			this.facing = direction.WEST;
-        }
-
-        else if(this.facing > direction.WEST){
-			this.facing = direction.NORTH;
-        }
+	getXPos() {
+		return this.xPos;
 	}
 	
+	getYPos() {
+		return this.yPos;
+	}
+	
+	//Sets the movement direction of the ant based on it's hex, cell state, and prior direction
+	setMovementDirection(cellState) {
+		var antDir = (this.hex % (32 >> cellState)) >> (4 - cellState);
+		
+		if(antDir == turnDirection.LEFT)
+			this.facing++;
+		else
+			this.facing--;
+		
+		if(this.facing < direction.NORTH)
+			this.facing = direction.WEST;
+		else if(this.facing > direction.WEST)
+			this.facing = direction.NORTH;
+	}
+	
+	//Moves the ant 1 cell based on the direction it should be moving and its current x, y values
 	move(cellState) {
-        /*
-         * Moves the Ant one cell based on the direction it should be moving and its current (x, y) values
-        */
-
 		this.setMovementDirection(cellState);
-		switch(this.facing){
-			case direction.NORTH:
+		switch(this.facing)
+		{
+			case 	direction.NORTH:
 				this.yPos++;
-                break;
-			case direction.WEST:
+			break;
+			case	direction.WEST:
 				this.xPos--;
-                break;
-			case direction.SOUTH:
+			break;
+			case	direction.SOUTH:
 				this.yPos--;
-                break;
-			case direction.EAST:
+			break;
+			case 	direction.EAST:
 				this.xPos++;
-                break;
+			break;
 		}
-
-		// Allows the ant to loop
-        if(this.xPos < 0){ this.xPos = 40; }
 		
-        if(this.yPos < 0){ this.yPos = 40; }
-
-        if(this.xPos > 40){ this.xPos = 0; }
+		//Allows the ant to loop
+		if(this.xPos < 0)
+			this.xPos = 40;
 		
-        if(this.yPos > 40){ this.yPos = 0; }
+		if(this.xPos > 40)
+			this.xPos = 0;
+		
+		if(this.yPos < 0)
+			this.yPos = 40;
+		
+		if(this.yPos > 40)
+			this.yPos = 0;
 	}
 }
