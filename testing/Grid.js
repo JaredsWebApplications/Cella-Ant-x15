@@ -124,15 +124,17 @@ class grid {
         return mat;
     }
 	
-	//Updates the color of an individual cell
+	//Updates the color of an individual cell and outputs it
 	updateIndexColor(xIndex, yIndex) {
-		this.matrix[xIndex][yIndex].updateColor();		
+		this.matrix[xIndex][yIndex].updateColor();
+		this.matrix[xIndex][yIndex].drawToScreen();		
 	}
 };
 
 var g_grid = new grid();
 var r_ant  = new RedAnt();
 
+//Function called before draw, initializes the matrix
 function setup() {
     var length = 410;
     var height = 410;
@@ -144,12 +146,16 @@ function setup() {
 			g_grid.matrix[x][y].drawToScreen();
         }
     }
-	
-	//Tests the 'updateIndexColor' function
 }
 
+//Function called every frame
 function draw() {
-	r_ant.move(g_grid.matrix[r_ant.getXPos()][r_ant.getYPos()].getState());
+	//Sets the ants direction
+	r_ant.setMovementDirection(g_grid.matrix[r_ant.getXPos()][r_ant.getYPos()].getState());
+	
+	//Updates the color of the cell the ant is currently on and updates the screen
 	g_grid.updateIndexColor(r_ant.getXPos(), r_ant.getYPos());
-	g_grid.matrix[r_ant.getXPos()][r_ant.getYPos()].drawToScreen();
+	
+	//Moves the ant based on the new movement direction
+	r_ant.move(g_grid.matrix[r_ant.getXPos()][r_ant.getYPos()]);
 }
