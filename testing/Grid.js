@@ -1,3 +1,8 @@
+/*
+ * Author(s): Jared Dyreson, Mason Godfrey
+ * Purpose: Provide instantiation of cells, a matrix containing said cells and logic to change the color cells at aribitrary positions
+*/
+
 const stateColor = {
 	BLACK 	: 0,
 	RED 	: 1,
@@ -86,6 +91,10 @@ class Cell {
 
 class point {
   constructor(x, y){
+    /*
+     * Represents x and y coordinates in a Cartesian plane
+    */
+
     this.x = x;
     this.y = y;
   }
@@ -96,8 +105,11 @@ class point {
 }
 
 class grid {
-    constructor(size=44){
-        this.size = size;
+    constructor(size=41, ps=10){
+        this.dimensions = size;
+        this.pixelSize = ps;
+        this.length = (this.dimensions * this.pixelSize);
+        this.height = this.length;
         this.matrix = this.createMatrix();
     }
 
@@ -109,18 +121,18 @@ class grid {
          * at each point on our stop, we're going to create a square and store it so we can manipulate it later
         */
         var mat = [];
-
-        let length = 410;
-        let height = 410;
-
-        for(let x = 0; x < length; x+=length/41) {
+        for(let x = 0; x < this.length; x+=(this.length / this.dimensions)) {
           let arr = [];
-          for(let y = 0; y < height; y+=height / 41) {
+          for(let y = 0; y < this.height; y+=(this.height / this.dimensions)) {
             let cell = new Cell(new point(x, y));
             arr.push(cell);
           }
           mat.push(arr);
         }
+        console.log("the length is ")
+        console.log(this.pixelSize);
+        console.log("printing matrix");
+        console.log(mat);
         return mat;
     }
 	
@@ -134,13 +146,10 @@ var g_grid = new grid();
 var r_ant  = new RedAnt();
 
 function setup() {
-    var length = 410;
-    var height = 410;
-	createCanvas(length, height);
+	createCanvas(g_grid.length, g_grid.height);
 	
-	let m = 41;
-	for(let x = 0; x < m; ++x){
-        for(let y = 0; y < m; ++y){
+	for(let x = 0; x < g_grid.dimensions; ++x){
+        for(let y = 0; y < g_grid.dimensions; ++y){
 			g_grid.matrix[x][y].drawToScreen();
         }
     }

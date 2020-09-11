@@ -12,11 +12,11 @@ const turnDirection = {
 
 class RedAnt {
 	//Set the current x and y position of the ant, hex value, and direction facing
-	constructor() {
-		this.xPos 	= 20;
-		this.yPos 	= 20;
-		this.facing = direction.NORTH;
-		this.hex 	= 0x15;
+	constructor(x=20, y=20, dir=direction.NORTH, h=0x15) {
+		this.xPos 	= x;
+		this.yPos 	= y;
+		this.facing = dir;
+		this.hex 	= h;
 	}
 	getXPos() {
 		return this.xPos;
