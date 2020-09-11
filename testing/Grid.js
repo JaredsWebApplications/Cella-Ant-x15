@@ -129,10 +129,6 @@ class grid {
           }
           mat.push(arr);
         }
-        console.log("the length is ")
-        console.log(this.pixelSize);
-        console.log("printing matrix");
-        console.log(mat);
         return mat;
     }
 	
