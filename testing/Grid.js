@@ -96,10 +96,14 @@ class point {
 }
 
 class grid {
-    constructor(size=44){
+    constructor(size){
         this.size = size;
         this.matrix = this.createMatrix();
     }
+	
+	getSize() {
+		return this.size;
+	}
 
     createMatrix(){
         /*
@@ -110,12 +114,12 @@ class grid {
         */
         var mat = [];
 
-        let length = 410;
-        let height = 410;
+        let length = this.size*10;
+        let height = this.size*10;
 
-        for(let x = 0; x < length; x+=length/41) {
+        for(let x = 0; x < length; x+=length/this.size) {
           let arr = [];
-          for(let y = 0; y < height; y+=height / 41) {
+          for(let y = 0; y < height; y+=height/this.size) {
             let cell = new Cell(new point(x, y));
             arr.push(cell);
           }
@@ -130,32 +134,3 @@ class grid {
 		this.matrix[xIndex][yIndex].drawToScreen();		
 	}
 };
-
-var g_grid = new grid();
-var r_ant  = new RedAnt();
-
-//Function called before draw, initializes the matrix
-function setup() {
-    var length = 410;
-    var height = 410;
-	createCanvas(length, height);
-	
-	let m = 41;
-	for(let x = 0; x < m; ++x){
-        for(let y = 0; y < m; ++y){
-			g_grid.matrix[x][y].drawToScreen();
-        }
-    }
-}
-
-//Function called every frame
-function draw() {
-	//Sets the ants direction
-	r_ant.setMovementDirection(g_grid.matrix[r_ant.getXPos()][r_ant.getYPos()].getState());
-	
-	//Updates the color of the cell the ant is currently on and updates the screen
-	g_grid.updateIndexColor(r_ant.getXPos(), r_ant.getYPos());
-	
-	//Moves the ant based on the new movement direction
-	r_ant.move();
-}

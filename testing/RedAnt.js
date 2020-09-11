@@ -1,3 +1,21 @@
+/********************************************************************
+ *	RED ANT * CREATED BY MASON GODFREY * mgodfrey@csu.fullerton.edu *
+ ********************************************************************
+ * This file is responsible for the logic behind the RedAnt class,
+ * as well as the RedAnt class itself.
+ *
+ * CONSTANTS
+ * direction - 	directions for North, East, South, and West
+ *				(moves clockwise).
+ * turnDirection - directions for facing a different direction.
+ *				   contains the Right and Left directions.
+ * CLASSES
+ * RedAnt - Holds the x, y position of an ant, it's hex value, and
+ *			the direction it is facing. Has functions for external
+ *			classes to retrieve it's current position. Has built
+ *			in functions for both changing direction and moving
+ * 			in a direction.
+ ********************************************************************/
 
 //Correlates with the direction the ant is facing, stored in clockwise fashion
 const direction = {
@@ -15,11 +33,11 @@ const turnDirection = {
 
 class RedAnt {
 	//Set the current x and y position of the ant, hex value, and direction facing
-	constructor() {
-		this.xPos 	= 20;
-		this.yPos 	= 20;
+	constructor(gridSize, hex) {
+		this.xPos 	= gridSize;
+		this.yPos 	= gridSize;
 		this.facing = direction.NORTH;
-		this.hex 	= 0x15;
+		this.hex 	= hex;
 	}
 	
 	//Returns the current x position of the ant
@@ -49,7 +67,8 @@ class RedAnt {
 	}
 	
 	//Moves the ant 1 cell based on the direction it should be moving and its current x, y values
-	move() {
+	//Y is decreased when moving north because lower index positions have a higher physical height.
+	move(gridSize) {
 		switch(this.facing)
 		{
 			case 	direction.NORTH:
@@ -68,15 +87,15 @@ class RedAnt {
 		
 		//Allows the ant to loop
 		if(this.xPos < 0)
-			this.xPos = 40;
+			this.xPos = gridSize-1;
 		
-		if(this.xPos > 40)
+		if(this.xPos > gridSize-1)
 			this.xPos = 0;
 		
 		if(this.yPos < 0)
-			this.yPos = 40;
+			this.yPos = gridSize-1;
 		
-		if(this.yPos > 40)
+		if(this.yPos > gridSize-1)
 			this.yPos = 0;
 	}
 }
