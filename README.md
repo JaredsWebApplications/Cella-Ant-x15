@@ -58,7 +58,7 @@ Time-stamp:
                    		   Contains the implementations for 3 classes, needed
                     		   for functions in Display.js file:
 
-                    		   Cell:   This class defines the dimensions, state,
+                    		    Cell:  This class defines the dimensions, state,
                          	 	   color, and ant properties for each cell object
                           		   within our grid. Which are then used by methods
                           		   to display the cell grid, and ant triangle 
@@ -68,7 +68,7 @@ Time-stamp:
                           		   for determining (x,y) position within the 
                              		   2-dimensional grid.
                       
-                   		   grid:   This class defines the dimension properties of a
+                   		    grid:  This class defines the dimension properties of a
                           		   grid object. Which methods wihtin the class use
                          		   to display real time updates to a cell color, ant
                           		   triangle animation, or if it needs to be redrawn.
@@ -112,8 +112,10 @@ Time-stamp:
      should see what looks to be a 41x41 grid (white lines on black background)
      with and some of the grid cells colored.  See the picture pix-js-cellaAnt.jpg 
 
-	NOTE: (brian) I will name the picture file "pix-js-cellaAnt.jpg", 
-              and will upload that file on my github branch
+	NOTE: (brian) I will name the picture files "pix-js-cellaAnt-<amt of time ran>.jpg", 
+              and will upload files on my github branch. Will get snapshots of 10 seconds, 
+	      15 minutes, 2 hours, 
+	      after starting. 
 
 
 ## KNOWN BUGS:
@@ -149,4 +151,4 @@ Time-stamp:
 
      And, of course, thanks to the HTML and P5.js developers. "
    
-`<addr>`
+
