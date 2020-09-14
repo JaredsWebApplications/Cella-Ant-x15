@@ -56,20 +56,20 @@ Time-stamp:
                    		   Contains the implementations for 3 classes, needed
                     		   for functions in Display.js file:
 
-                    		   Cell:  This class defines the dimensions, state,
-                         	 	  color, and ant properties for each cell object
-                          		  within our grid. Which are then used by methods
-                          		  to display the cell grid, and ant triangle 
+                    		   Cell:   This class defines the dimensions, state,
+                         	 	   color, and ant properties for each cell object
+                          		   within our grid. Which are then used by methods
+                          		   to display the cell grid, and ant triangle 
                     
-                   		  Point:  This class models the ordered pair type of object
-                         		  which includes x & y coordinates. This is useful
-                          		  for determining (x,y) position within the 
-                             		  2-dimensional grid.
+                   		   Point:  This class models the ordered pair type of object
+                         		   which includes x & y coordinates. This is useful
+                          		   for determining (x,y) position within the 
+                             		   2-dimensional grid.
                       
-                   		   grid:  This class defines the dimension properties of a
-                          		  grid object. Which methods wihtin the class use
-                         		  to display real time updates to a cell color, ant
-                          		  triangle animation, or if it needs to be redrawn.
+                   		   grid:   This class defines the dimension properties of a
+                          		   grid object. Which methods wihtin the class use
+                         		   to display real time updates to a cell color, ant
+                          		   triangle animation, or if it needs to be redrawn.
 
   File RedAnt.js   	      ||   This file is responsible for the logic behind the RedAnt
                    		   class, as well as the RedAnt class itself.
@@ -99,8 +99,6 @@ Time-stamp:
                                    utility draw_grid function written in P5+JS. 
                                    // Loaded inside the html.       
   
-  File 	...
-  ...
 
 
 ## INSTALLATION AND RUNNING: 
