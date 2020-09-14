@@ -18,10 +18,14 @@ Time-stamp:
 
 // readme.txt file :: project overview
 
-CLASS: CPSC-335 - Algorithms | Section-02
-PROJECT #1: Cella-Ant-x15
-TEAM NAME: ??
-TEAM MEMBERS:
+## CLASS: CPSC-335 - Algorithms | Section-02
+
+## PROJECT #1: Cella-Ant-x15
+
+## TEAM NAME: ??
+
+## TEAM MEMBERS:
+
 - Mason Godfrey
 - Jared Dyreson
 - Brian Lucero
