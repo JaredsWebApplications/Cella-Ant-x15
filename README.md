@@ -35,6 +35,9 @@ Time-stamp:
   Cella-Ant-x15  
   A cellular automaton (Cella) variant of Langton's Ant written
   in Javascript and P5JS for CS 335.
+  
+  NOTE: (brian) will be finishing this part 
+  
   ...	
 
 ## ZIP CONTENTS: 
@@ -43,61 +46,65 @@ Time-stamp:
 NOTE: (brian) will finish adding the remaining files and short descriptions.
 
 
-  File readme.txt   |   This file
+  File readme.txt  	      ||   This file
 
-  File Display.js   |   This file contains 2 functions that initially
-                    build and maintain the environment. 
-                    setup(): to be run when a webpage initially runs
-                    draw(): updates the program every frame.
+  File Display.js  	      ||   This file contains 2 functions that initially
+                    		   build and maintain the environment. 
+                    		   setup(): to be run when a webpage initially runs
+                    		   draw(): updates the program every frame.
 
-  File Grid.js      |   This file provides the instantiation of cells,
-                    a matrix conatainig said cells and logic to change
-                    the color cells at arbitrary positions
-                    Contains the implementations for 3 classes, needed
-                    for functions in Display.js file:
+  File Grid.js     	      ||   This file provides the instantiation of cells,
+                   		   a matrix conatainig said cells and logic to change
+                    		   the color cells at arbitrary positions
+                   		   Contains the implementations for 3 classes, needed
+                    		   for functions in Display.js file:
 
-                    Cell: This class defines the dimensions, state,
-                          color, and ant properties for each cell object
-                          within our grid. Which are then used by methods
-                          to display the cell grid, and ant triangle 
+                    		   Cell:  This class defines the dimensions, state,
+                         	 	  color, and ant properties for each cell object
+                          		  within our grid. Which are then used by methods
+                          		  to display the cell grid, and ant triangle 
                     
-                   Point: This class models the ordered pair type of object
-                          which includes x & y coordinates. This is useful
-                          for determining (x,y) position within the 
-                          2-dimensional grid.
+                   		  Point:  This class models the ordered pair type of object
+                         		  which includes x & y coordinates. This is useful
+                          		  for determining (x,y) position within the 
+                             		  2-dimensional grid.
                       
-                   grid:  This class defines the dimension properties of a
-                          grid object. Which methods wihtin the class use
-                          to display real time updates to a cell color, ant
-                          triangle animation, or if it needs to be redrawn.
+                   		   grid:  This class defines the dimension properties of a
+                          		  grid object. Which methods wihtin the class use
+                         		  to display real time updates to a cell color, ant
+                          		  triangle animation, or if it needs to be redrawn.
 
-  File RedAnt.js   |   This file is responsible for the logic behind the RedAnt
-                   class, as well as the RedAnt class itself.
-                   ** comment from the file^ **
+  File RedAnt.js   	      ||   This file is responsible for the logic behind the RedAnt
+                   		   class, as well as the RedAnt class itself.
 
-		   ** Brian's edit: ** 
-		   This file defines the Position-Direction-Turn relationship
-                   properties later used to implement the RedAnt class and
-                   its navigation instructions. Cell color determines turn, 
-                   further influencing direction, thus eventually establishing
-                   a simple navigation pattern, due to value dependence.  
+                   		   ** comment from the file^ **
+
+		   		   ** Brian's idea edit: ** 
+		   		   This file defines the Position-Direction-Turn relationship
+                   	           properties later used to implement the RedAnt class and
+                   		   its navigation instructions. Cell color determines turn, 
+                  	           further influencing direction, thus eventually establishing
+                   	           a simple navigation pattern, due to value dependence.  
   
 
-  File p5.js       |   This is the P5 package.  It is loaded inside the html.
+  File p5.js       	      ||   This is the P5 package.  It is loaded inside the html.
  
 
-  File assets/styles.css   |   This is an extra-small example of controlling
-                           webpage styling.  // Loaded inside the html.
+**looks like we dont need these files**
+
+  File assets/styles.css      ||   This is an extra-small example of controlling
+                                   webpage styling.  // Loaded inside the html.
 
 
-  File assets/draw-stuff.js   |   This is an example to show loading a JS
-                              script file from a folder other than the index
-                              HTML file's folder location.  It also includes the
-                              utility draw_grid function written in P5+JS. 
-                              // Loaded inside the html.       
+  File assets/draw-stuff.js   ||   This is an example to show loading a JS
+                                   script file from a folder other than the index
+                              	   HTML file's folder location.  It also includes the
+                                   utility draw_grid function written in P5+JS. 
+                                   // Loaded inside the html.       
   
   File 	...
   ...
+
 
 ## INSTALLATION AND RUNNING: 
 
@@ -131,7 +138,7 @@ NOTE: (brian) will finish adding the remaining files and short descriptions.
 
 	J & M & B: need ur input/thoughts
 
-  Note: determine what to write if no known issues
+  NOTE: determine what to write if no known issues
 
 
 ## CREDITS 
