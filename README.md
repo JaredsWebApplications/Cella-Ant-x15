@@ -12,7 +12,7 @@ This is the hierarchy that we should follow to efficiently create this project a
 
 ___________________________________________________________________________________________________________
 
-===========================================
+##  
 README.txt rough draft || author: Brian
 ===========================================
 
