@@ -12,8 +12,9 @@ This is the hierarchy that we should follow to efficiently create this project a
 
 ___________________________________________________________________________________________________________
 
+===========================================
 README.txt rough draft || author: Brian
-=================================
+===========================================
 
 readme.txt file to explain the project
 
@@ -24,9 +25,7 @@ TEAM MEMBERS:
 - Mason Godfrey
 - Jared Dyreson
 - Brian Lucero
-
-	 (in bold) 
-
+ 
 ## INTRODUCTION: 
 
   Cella-Ant-x15  
