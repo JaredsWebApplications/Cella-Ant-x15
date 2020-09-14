@@ -36,14 +36,18 @@ TEAM MEMBERS:
 
 ## ZIP CONTENTS: 
 
-  File readme.txt | This file
 
-  File Display.js | This file contains 2 functions that initially
+NOTE: (brian) will finish adding the remaining files and short descriptions.
+
+
+  File readme.txt   |   This file
+
+  File Display.js   |   This file contains 2 functions that initially
                     build and maintain the environment. 
                     setup(): to be run when a webpage initially runs
                     draw(): updates the program every frame.
 
-  File Grid.js    | This file provides the instantiation of cells,
+  File Grid.js      |   This file provides the instantiation of cells,
                     a matrix conatainig said cells and logic to change
                     the color cells at arbitrary positions
                     Contains the implementations for 3 classes, needed
@@ -64,7 +68,7 @@ TEAM MEMBERS:
                           to display real time updates to a cell color, ant
                           triangle animation, or if it needs to be redrawn.
 
-  File RedAnt.js | This file is responsible for the logic behind the RedAnt
+  File RedAnt.js   |   This file is responsible for the logic behind the RedAnt
                    class, as well as the RedAnt class itself.
                    ** comment from the file^ **
 
@@ -76,14 +80,14 @@ TEAM MEMBERS:
                    a simple navigation pattern, due to value dependence.  
   
 
-  File p5.js     | This is the P5 package.  It is loaded inside the html.
+  File p5.js       |   This is the P5 package.  It is loaded inside the html.
  
 
-  File assets/styles.css | This is an extra-small example of controlling
+  File assets/styles.css   |   This is an extra-small example of controlling
                            webpage styling.  // Loaded inside the html.
 
 
-  File assets/draw-stuff.js | This is an example to show loading a JS
+  File assets/draw-stuff.js   |   This is an example to show loading a JS
                               script file from a folder other than the index
                               HTML file's folder location.  It also includes the
                               utility draw_grid function written in P5+JS. 
