@@ -92,7 +92,8 @@ A[header description] -- more detail --> B[fancy readme summary]
 
 File **p5.js**
 >This is the P5 package.  It is loaded inside the html.
- 
+
+ ##
 	NOTE: looks like we dont need these files
 
 File **assets/styles.css**
@@ -105,6 +106,7 @@ File **assets/draw-stuff.js**
 >HTML file's folder location.  It also includes the
 >utility draw_grid function written in P5+JS.
 >// Loaded inside the html.       
+##
 >
 ### INSTALLATION AND RUNNING: 
 1.	> Extract the .zip file into a folder.
