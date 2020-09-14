@@ -24,6 +24,8 @@ Time-stamp:
 
 ## TEAM NAME: ??
 
+  NOTE: which name are we using, I saw burrito in the mix somewhere.  
+
 ## TEAM MEMBERS:
 
 - Mason Godfrey
@@ -35,13 +37,13 @@ Time-stamp:
   Cella-Ant-x15  
   A cellular automaton (Cella) variant of Langton's Ant written
   in Javascript and P5JS for CS 335.
-  ...
-  **NOTE: (brian) will be finishing this part 	
+  
+    NOTE: (brian) will be finishing this part 	
 
 
 ## ZIP CONTENTS: 
 
-**NOTE: (brian) will finish adding the remaining files and short descriptions.
+    NOTE: (brian) will finish adding the remaining files and short descriptions.
 
   File readme.txt  	      ||   This file
 
@@ -87,7 +89,7 @@ Time-stamp:
   File p5.js       	      ||   This is the P5 package.  It is loaded inside the html.
  
 
-**looks like we dont need the following files?
+    looks like we dont need the following files?
 
   File assets/styles.css      ||   This is an extra-small example of controlling
                                    webpage styling.  // Loaded inside the html.
@@ -133,12 +135,12 @@ Time-stamp:
 
 	J & M & B: need ur input/thoughts
 
-  **NOTE: determine what to write if no known issues
+    NOTE: determine what to write if no known issues
 
 
 ## CREDITS 
 
-**NOTE: list out 3rd party ref/material here:
+     NOTE: list out 3rd party ref/material here:
 
    - siskas reference:
    " Some code was borrowed and modified from Stuart's book.  
