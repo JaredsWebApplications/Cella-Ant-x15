@@ -12,11 +12,12 @@ This is the hierarchy that we should follow to efficiently create this project a
 
 ___________________________________________________________________________________________________________
 
-##  
-README.txt rough draft || author: Brian
-===========================================
+README.txt rough draft || Brian
+=========================================
 
-readme.txt file to explain the project
+
+
+// readme.txt file to explain the project
 
 CLASS: CPSC-335 - Algorithms | Section-02
 PROJECT #1: Cella-Ant-x15
