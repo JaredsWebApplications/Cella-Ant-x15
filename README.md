@@ -98,36 +98,49 @@ TEAM MEMBERS:
 
   2. Navigate to the driver.html file wihtin the folder. Right-click on the file
      and select "Open". The p5 program should start immediately. You
-     should see what looks to be a  grid (white lines on black background) with
-     row/column headers and some of the grid cells colored.  See the
-     picture pix-js-cellaAnt.jpg. 
+     should see what looks to be a 41x41 grid (white lines on black background)
+     with and some of the grid cells colored.  See the picture pix-js-cellaAnt.jpg 
 
-	NOTE: (brian) I named the picture file pix-js-cellaAnt.jpg, 
-              and will upload the file on my github branch
-
-
-## KNOWN BUGS: 
+	NOTE: (brian) I will name the picture file "pix-js-cellaAnt.jpg", 
+              and will upload that file on my github branch
 
 
-## WARNINGS:
+## KNOWN BUGS:
+
+	J & M: need ur input/thoughts
+
+
+## WARNINGS 
+
+	J & M: need ur input/thoughts
 
 
 ## TESTING 
 
+	J & M: need ur input/thoughts
 
-## ISSUES: 
+
+## ISSUES 
+
+	J & M & B: need ur input/thoughts
+
   Note: determine what to write if no known issues
 
 
-## CREDITS:
-   - list out 3rd party ref/material here
+## CREDITS 
+
+list out 3rd party ref/material here:
    - siskas reference:
+
    " Some code was borrowed and modified from Stuart's book.  
-    Introducing JavaScript Game Development: Build a 2D Game from the
-    Ground Up, by Graeme Stuart, 2018, 209 pages.
+     Introducing JavaScript Game Development: Build a 2D Game from the
+     Ground Up, by Graeme Stuart, 2018, 209 pages.
 
-  And, of course, thanks to the HTML and P5.js developers. "
-
+     And, of course, thanks to the HTML and P5.js developers. "
+     
+     
+		                     ~
+     
 
 ============ this is what siska has on his readme.txt example file ==============
 
@@ -211,6 +224,3 @@ Credits
     Ground Up, by Graeme Stuart, 2018, 209 pages.
 
   And, of course, thanks to the HTML and P5.js developers.
-  
-
-	
