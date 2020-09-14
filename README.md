@@ -45,7 +45,7 @@ Time-stamp:
 
     NOTE: (brian) will finish adding the remaining files and short descriptions.
 
-  File readme.txt  	      ||   This file
+  File readme.txt; This file
 
   File Display.js  	      ||   This file contains 2 functions that initially
                     		   build and maintain the environment. 
