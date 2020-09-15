@@ -14,15 +14,21 @@
  *		  facing.
  *************************************************************************/
 
+//Creates a 41 by 41 grid
 var g_grid = new grid(41);
+
+//Creates an ant with the x and y position 20 and base it's logic on 0x15.
 var r_ant  = new RedAnt(20, 0x15);
 
 //Function called before draw, initializes the matrix
 function setup() {
+	
+	//Create a canvas
     var length = g_grid.getSize()*10;
     var height = g_grid.getSize()*10;
 	createCanvas(length, height);
 	
+	//Draw the grid we've created to the screen
 	let m = g_grid.getSize();
 	for(let x = 0; x < m; ++x){
         for(let y = 0; y < m; ++y){
@@ -31,8 +37,12 @@ function setup() {
     }
 }
 
+//Whether we are done animating or not
 var doneAnimating = true;
+
+//X offset of the animation vs the ant
 var antX;
+//Y offset of the animation vs the ant
 var antY;
 
 //Function called every frame

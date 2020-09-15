@@ -1,3 +1,5 @@
+
+//The color of a cell
 const stateColor = {
 	BLACK 	: 0,
 	RED 	: 1,
@@ -6,8 +8,9 @@ const stateColor = {
 	GREEN 	: 4
 }
 
+//Cell on a grid
 class Cell {
-	
+	//Return the dimensions of the cell
     dimensions(){
       return [this.bl.x, this.bl.y, this.length, this.width];
     }
@@ -50,8 +53,6 @@ class Cell {
         return this.getCurrentColor();
 	}
 	
-
-
 	constructor(bl, length=10, width=10) {
         /*
          * bl: bottom left coordinate
@@ -60,9 +61,7 @@ class Cell {
          * both of these are defaulted to 10
          * state: which color is the cell
         */
-
 	    this.state = stateColor.BLACK;
-      
         this.bl = bl;
         this.length = length;
         this.width = width;
@@ -86,13 +85,12 @@ class Cell {
 	//Draws the ant to the screen, given it's x and y offset
 	drawAntToScreen(xOffset, yOffset, facing) {
 		fill("white");
-		//stroke('black');
-		//strokeWeight(.6);
 		
-		
-	  let [x1,y1, height, width] = this.dimensions();
-	  
-	  switch(facing) {
+	//Get the triangle's info based on the current dimensions. We don't need height or width, they will be dropped
+	let [x1,y1, height, width] = this.dimensions();
+	
+	//Set the direction the triangle is facing based on the direction the ant is facing logically
+	switch(facing) {
 		case 0:
 			triangle(x1 + xOffset + 5, y1 + yOffset + 3, x1 + xOffset + 3, y1 + yOffset + 6, x1 + xOffset + 7, y1 + yOffset + 6);
 			break;
@@ -109,15 +107,17 @@ class Cell {
 	}
 }
 
+//A point where a Cell is based at
 class point {
-  constructor(x, y){
-    this.x = x;
-    this.y = y;
-  }
+	constructor(x, y){
+		this.x = x;
+		this.y = y;
+	}
 
-  position(){
-      return [this.x, this.y];
-  }
+	//location of the current cell
+	position(){
+		return [this.x, this.y];
+	}
 }
 
 class grid {
@@ -126,6 +126,7 @@ class grid {
         this.matrix = this.createMatrix();
     }
 	
+	//The size of the grid (in cells)
 	getSize() {
 		return this.size;
 	}
