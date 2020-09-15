@@ -1,3 +1,35 @@
+/************************************************************************
+ *	GRID *    CREATED BY JARED DYRESON * jareddyreson@csu.fullerton.edu *
+ *						 MASON GODFREY * mgodfrey@csu.fullerton.edu     *
+ ************************************************************************
+ * This file contains classes for cells, the Grid in which the ant resides on and Cartesian Coordinates
+ *
+ * CLASSES
+ * Cell - an instaniation of a square on the grid containing its position and dimension
+ *      FUNCTIONS
+ *
+ *      dimensions - returns an unpackable data structure of all class attributes.
+ *      getState - retrieve the current state of a cell
+ *      getCurrentColor - based on the next state of the cell, return the color in which it needs to be filled
+ *      updateColor - update the current cell
+ *      drawToScreen - draw the current instance of the cell on the webpage
+ *      drawAntToScreen - given the current position of the ant, draw it's triangle representation on the screen inside the cell it resides in 
+ *
+ * Point - Cartesian coordinate representation of the position where the Ant resides
+ *      FUNCTIONS
+ *
+ *      position - unpackable data structure that contains the x, y values
+ *
+ * grid - a 2 x 2 matrix containing all the cells that can be manipulated and redrawn. 
+ *      FUNCTIONS
+ *      getSize - return the current dimension of the grid (MxM => only returns one value)
+ *      createMatrix - create the matrix and stores each Cell instantiation
+ *      updateIndexColor - update the color at a specific index and then redraw it
+ *      redraw - redraw an instance of a cell
+ *      updateAntVisual - update the ant's representation on the grid
+ *      
+ *
+ *************************************************************************/
 
 //The color of a cell
 const stateColor = {
