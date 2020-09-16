@@ -11,14 +11,13 @@
 - Jared Dyreson
 - Brian Lucero
 
-
 ## INTRODUCTION: 
 
   **Cella-Ant-x15**  
 A cellular automaton (Cella) variant of Langton's Ant written
 in Javascript and P5JS for CS 335.
 
-**Christopher Langton**, an American computer scientist, conceptualized the initial ant concept. 
+**Christopher Langton**, an American computer scientist, conceptualized the initial ant logic. 
   >Visually, an animation of an "ant" starts out on a 2 dimensional grid containing black and white cells, and it follows a set of rules which determine the ant's path.
   
   >1. If the ant is on a black square, it turns right  degrees and moves forward one unit.
@@ -28,7 +27,7 @@ in Javascript and P5JS for CS 335.
 >Despite having such a simple instruction set, the navigation pattern becomes more complex and emergent  behavior is observed. Even more so when Turk and Propp thought to involve more colors than just black and white, thus described as a *Cellular Automaton*, "Cella-Ant-x15". 
 
 The concepts and topics shown below, form the compositional model of Langton's Ant, the foundational idea. 
-The text in this file will also produce a neat diagram of the concept inner-relationships, if the text in this readme file is placed in a markdown format extensions that supports it. I used the following extension: 
+The text in this file will also produce a neat diagram of the concept inner-relationships, if the text in this readme file is pasted into a markdown format extension that supports it. I used the following extension: 
 > Written with [StackEdit](https://stackedit.io/).
 
  ```mermaid
