@@ -27,7 +27,10 @@ in Javascript and P5JS for CS 335.
 
 >Despite having such a simple instruction set, the navigation pattern becomes more complex and emergent  behavior is observed. Even more so when Turk and Propp thought to involve more colors than just black and white, thus described as a *Cellular Automaton*, "Cella-Ant-x15". 
 
-The concepts and topics shown below, form the compositional model of Langton's Ant, the foundational idea.
+The concepts and topics shown below, form the compositional model of Langton's Ant, the foundational idea. 
+The text in this file will also produce a neat diagram of the concept inner-relationships, if the text in this readme file is placed in a markdown format extensions that supports it. I used the following extension: 
+> Written with [StackEdit](https://stackedit.io/).
+
  ```mermaid
 graph TD
 A[Turk and Propp's Ant - Cellular Automaton] -- General concept --> B((Langston's Ant))
